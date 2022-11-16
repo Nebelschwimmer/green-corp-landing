@@ -8,6 +8,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top:0;
+    background-color: #fff;
+    z-index: 1;
   }
   .header__logo {
     height: 30px;
@@ -33,19 +37,38 @@ body {
     cursor: pointer;
     box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
     padding: 15px;
+    margin:5px;
   }
   button:hover {
     background-color: #f6980c;
     box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
     transition: background-color 0.3s ease-in;
   }
-  .about__image {
-    width: 500px;
-  }
-   
   .about__sun-image {
     width: 100px;
     height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: rotate(360deg);
+    position: absolute;
+  }
+  .about__image {
+    width: 500px;
+    
+  }
+   
+ 
+  
+  @keyframes rotation {
+    0%{
+      transform: rotate(0deg);
+    }
+  
+    100%{
+      transform: rotate(360deg);
+    }
   }
   .about {
     display: flex;
@@ -56,9 +79,10 @@ body {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    height:80vh;
   }
   .about h1 {
-    font-size:70px;
+    font-size: 70px;
     line-height:76px;
   }
   .about p {
@@ -92,11 +116,11 @@ body {
 
 }
 
-.form_h1 {
-  font-size: 48px;
+.form h1 {
+  font-size: 58px;
 }
 
-.form_p {
+.form p {
   font-size: 18px;
   opacity: 0.65;
 }
@@ -149,16 +173,16 @@ input {
   outline: none;
 }
 footer{
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-right: 20px;
   padding-left: 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight:600;
 }
 .footer__container{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 
 }
 .footer__copyright{
@@ -179,4 +203,292 @@ h3{
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+}
+
+.features {
+background-color: #fff;
+padding-top: 115px;
+padding-bottom:115px;
+padding-right: 60px;
+padding-left: 60px;
+
+}
+.cards{
+  display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 50px;
+}
+.card {
+  padding-top: 35px;
+  padding-bottom: 25px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: solid;
+  border-width: 1x;
+  border-color: #D9E4E6;
+  border-radius: 5px;
+}
+.card p{
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 0.8
+} 
+.card_logo {
+height: 100px;
+width: 100px;
+font-size: 32px;
+font-weight: 700;
+background-color: #eaeff9;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card_logo.yellow {
+  color: #ffb406;
+}
+.card_logo.red {
+  color: #ad1714;
+}
+
+.card_logo.green {
+  color: #22a030;
+}
+.features__border{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #E6EAF4;
+  width: 100%;
+}
+.features__feedback {
+  display: flex;
+}
+
+.features__feedback-left {
+  margin-right: 10px;
+}
+
+.features__feedback-left h2 {
+  font-size: 48px;
+}
+
+.features__feedback-left p {
+  font-size: 18px;
+  opacity: 0.7;
+  line-height: 26px;
+}
+
+.features__feedback-right {
+  display: flex;
+  align-items: center;
+}
+
+.features__box {
+  border-radius: 25px;
+  padding: 30px 40px 25px 40px;
+  color: white;
+}
+
+.features__box h3 {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.features__savings-box {
+  background-color: #dc5e26;
+  box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+  margin-right: 30px;
+}
+
+.features__rate-box {
+  background-color: #1D263A;
+  box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+}
+
+.stars {
+  color: #ff7039;}
+  
+.promo {
+    display: flex;
+  }
+  
+  .promo__image {
+    background-image: url(img/promo.jpg);
+    width: 50%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .promo__right {
+    background: #dd5f26;
+    padding: 160px 60px;
+  }
+
+  .promo__text {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  
+  .promo__text p::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ec6b29;
+    margin-right: 10px;
+  }
+  
+  .promo__text p {
+    opacity: 0.8;
+  }
+  
+  .promo__text button {
+    background-color: #107b1c;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+    padding: 15px 30px;
+  }
+  
+  .promo__button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .promo__text button i {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+
+
+
+
+
+
+
+/* Мобильные устройства */
+@media (max-width: 720px) {
+  header {
+      padding: 10px;
+  }
+
+  .header__logo {
+      height: 20px;
+  }
+
+  header a {
+      margin-right: 10px;
+  }
+
+  .about {
+      flex-direction: column-reverse;
+      padding: 50px 10px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+
+  .form {
+      padding: 50px 10px;
+  }
+
+  .form h1 {
+      font-size: 36px;
+  }
+
+  footer {
+      padding: 50px 10px;
+  }
+
+  .footer__container {
+      flex-direction: column;
+  }
+  .features {
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom:50px;
+    padding-right: 10px;
+    padding-left: 10px;
+ 
+}
+.cards{
+  display:grid;
+  grid-template-columns: auto;
+  }
+ 
+  .features__feedback {
+    flex-direction: column;
+  }
+
+  .features__feedback-left {
+    margin-right: 0;
+  }
+  
+  .features__feedback-left h2, .features__box h3 {
+    font-size: 36px;
+  }
+
+  .features__feedback-right {
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .features__savings-box {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+ 
+ .promo {
+  flex-direction: column-reverse;
+}
+
+.promo__right {
+  padding: 50px 10px;
+}
+
+.promo__image {
+  width: 100%;
+  height: 500px;
+}
+}
+
+
+ /* Планшеты */
+@media (max-width: 1024px) {
+  .about {
+      padding: 115px 20px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
 }
