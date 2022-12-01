@@ -405,6 +405,7 @@ width:100%;
   .about {
       flex-direction: column-reverse;
       padding: 50px 10px;
+      height:100%
   }
 
   .about h1 {
