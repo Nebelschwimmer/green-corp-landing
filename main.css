@@ -80,6 +80,7 @@ body {
     background-position: center;
     background-size: cover;
     height:80vh;
+    position: relative;
   }
   .about h1 {
     font-size: 70px;
@@ -212,6 +213,7 @@ padding-bottom:115px;
 padding-right: 60px;
 padding-left: 60px;
 
+
 }
 .cards{
   display: grid;
@@ -262,10 +264,12 @@ align-items: center;
 }
 .features__feedback {
   display: flex;
+  justify-content: space-between;
 }
 
 .features__feedback-left {
   margin-right: 10px;
+ 
 }
 
 .features__feedback-left h2 {
@@ -299,6 +303,7 @@ align-items: center;
   background-color: #dc5e26;
   box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
   margin-right: 30px;
+  height:55%;
 }
 
 .features__rate-box {
@@ -366,6 +371,15 @@ align-items: center;
   .promo__text button i {
     font-size: 15px;
     margin-left: 5px;
+  }
+
+  .orb-canvas {
+position: absolute;
+top: 0;
+height: 100%;
+right: 0;
+width:100%;
+
   }
 
 
